@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Sign Up</title>
+    <link rel="stylesheet" href="Login_Signup.css"> <!-- Replace with your actual stylesheet link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Croissant+One&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+           box-sizing: border-box;
+        }
+        
+        body {
+            background-image: url(bg.jpg);
+            display: flex;
+            background-size: 100% 750px;
+            font-family: 'Mulish', sans-serif;
+            justify-content: center; /* Center content horizontally */
+            align-items: center; /* Center content vertically */
+            height: 100vh; /* Use 100% of the viewport height */
+        }
+        .header login 
+        .header signup{
+          margin-bottom: 25px;
+          margin: 0 0 25px 0;
+        }
+        img{
+            position: center;
+            width: 80px;
+            top: 50%;
+            left: 50%;
+            border-radius: 50%;
+            box-shadow: 1px 1px 15px cyan;
+        }
+        .header, .login,
+         .signup{
+            text-align: center;
+        }
+        .login,
+        .signup {
+            width: 400px;
+            height: 590px;
+            margin: center;
+            margin-right: 36%;
+            margin-left: 36%;
+            margin-top: 5%;
+            margin-bottom: 5%;
+            padding: 40px; 
+            background-color: rgba(0, 0, 0,0.7);
+            color:rgb(0, 255, 251);
+            text-align: center;
+            border-radius: 20px;
+            box-shadow: 2px 2px 25px rgb(6, 226, 255);
+        }
+        
+        .login text,
+        .signup text {
+            margin-bottom: 25px;
+            margin: 0 0 25px 0;
+            text-align: center; /* Center text within the container */
+        }
+        
+      
+        
+        .inp1,
+        .inp2,
+        .inp3 {
+            border: 1px  solid aqua;
+            background-color: rgb(0, 0, 0);
+            width: 70%;
+            height: 52px;
+            text-align: center;
+            font-size: 18px;
+            margin-top: 15px; /* Adjust the margin as needed */
+            outline: none;
+            border-radius: 50px;
+            color: white;
+        }
+        
+        .text button,
+        .signup button {
+            width: 300px;
+            height: 50px;
+            background-color: aqua;
+            color: black;
+            border: none;
+            font-size: 20px;
+            border-radius: 25px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            border: 3px solid aqua;
+            color: white;
+            font-size: 22px;
+            background-color: black;
+        }
+        
+        p,
+        .signup p {
+            margin-top: 20px; /* Adjust the margin as needed */
+            font-size: 20px;
+            text-align: center; /* Center text within the paragraph */
+        }
+        
+        p span,
+        .signup p span {
+            color: aqua;
+            cursor: pointer;
+        }
+        .social-icons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.social-icons img {
+    width: 40px;
+    height: 40px;
+}
+
+.social-icons a:hover img {
+    opacity: 0.8;
+}
+        </style>
+</head>
+<body>
+   
+    <div class="login">
+           
+        <div class="text">
+            <header> <img src="login.png" alt="Login Icon"></header>
+            <br>
+            <form id="login">
+                <input class="inp1" type="text" placeholder="Enter UserName">
+                <input class="inp2" type="password" placeholder="Enter Password">
+                <p>Forgot Password?</p>
+                <button>Login</button>
+            </form>
+            <p>Don't have an account? <span>Sign Up</span></p>
+                <div class="social icons">
+               <p>Or login with </p>
+               <div class="social-icons">
+                <a href="#"><img src="facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="Google.png" alt="Twitter"></a>
+                <a href="#"><img src="instagram.png" alt="Instagram"></a>
+                <!-- Add more social media icons as needed -->
+               </div>        
+        </div>
+       </div>
+      </div>
+     
+    <div class="signup" style="display: none;">
+        <div class="text">
+            <header><img src="Register.png" alt="Register Icon"></header>
+            <br>
+            <form id="signup">
+                <input class="inp1" type="text" placeholder="Enter UserName">
+                <input class="inp2" type="password" placeholder="Enter Password">
+                <input class="inp3" type="password" placeholder="Confirm Password">
+                <button>Sign Up</button>
+            </form>
+            <p>Already have an account? <span>Login</span></p>
+            <div class="social icons">
+                <p>Or login with </p>
+                <div class="social-icons">
+                 <a href="#"><img src="facebook.png" alt="Facebook"></a>
+                 <a href="#"><img src="Google.png" alt="Twitter"></a>
+                 <a href="#"><img src="instagram.png" alt="Instagram"></a>
+                 <!-- Add more social media icons as needed -->
+                </div>        
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="signup" style="display: none;">
+            <!-- Your existing content for signup -->
+        </div>
+    <script>
+        document.querySelector('.login p span').addEventListener('click', function () {
+            document.querySelector('.login').style.display = 'none';
+            document.querySelector('.signup').style.display = 'block';
+        });
+
+        document.querySelector('.signup p span').addEventListener('click', function () {
+            document.querySelector('.signup').style.display = 'none';
+            document.querySelector('.login').style.display = 'block';
+        });
+    </script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+</body>
+</html>
